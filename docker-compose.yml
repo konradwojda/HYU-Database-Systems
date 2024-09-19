@@ -1,0 +1,23 @@
+services:
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'lab'
+      MYSQL_USER: 'hyu'
+      MYSQL_PASSWORD: 'qwert'
+      MYSQL_ROOT_PASSWORD: 'qwert'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - my-db:/var/lib/mysql
+  adminer:
+    image: adminer:latest
+    environment:
+      ADMINER_DEFAULT_SERVER: db
+    ports:
+      - 8080:8080
+volumes:
+  my-db:
