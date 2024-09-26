@@ -3,7 +3,6 @@ services:
     image: mysql:8.0
     restart: always
     environment:
-      MYSQL_DATABASE: 'lab'
       MYSQL_USER: 'hyu'
       MYSQL_PASSWORD: 'qwert'
       MYSQL_ROOT_PASSWORD: 'qwert'
