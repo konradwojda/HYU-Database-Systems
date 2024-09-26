@@ -7,17 +7,17 @@ mysql> select count(*) from employees where birth_date >= '1980-01-01';
 +----------+
 1 row in set (0.06 sec)
 
-mysql> select distinct emp_no from salaries where salary between 75000 and 80000 limit 5;
+mysql> select emp_no from salaries where salary between 75000 and 80000 limit 5;
 +--------+
 | emp_no |
 +--------+
 |  10001 |
+|  10001 |
+|  10001 |
 |  10005 |
 |  10007 |
-|  10009 |
-|  10010 |
 +--------+
-5 rows in set (0.01 sec)
+5 rows in set (0.00 sec)
 
 mysql> select avg(salary) from salaries where salary between 75000 and 80000;
 +-------------+

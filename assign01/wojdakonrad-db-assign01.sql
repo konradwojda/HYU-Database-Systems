@@ -4,7 +4,7 @@ SELECT 'WOJDA KONRAD ASSIGN-02' as 'INFO';
 
 select count(*) from employees where birth_date >= '1980-01-01';
 
-select distinct emp_no from salaries where salary between 75000 and 80000 limit 5;
+select emp_no from salaries where salary between 75000 and 80000 limit 5;
 
 select avg(salary) from salaries where salary between 75000 and 80000;
 
