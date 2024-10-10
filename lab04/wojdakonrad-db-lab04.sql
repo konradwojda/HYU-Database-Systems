@@ -1,4 +1,4 @@
-use lab;
+use library;
 SELECT 'WOJDA KONRAD LAB-04' as 'INFO';
 /* query #1 */
 select a.id from authors a join authored au on a.id = au.author_id join books b on b.id = au.book_id where b.title='Elena Knows';
