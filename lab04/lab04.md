@@ -7,13 +7,13 @@ mysql> select a.id from authors a join authored au on a.id = au.author_id join b
 +----+
 1 row in set (0.00 sec)
 
-mysql> select b.title from books b join authored au on au.book_id = b.id join authors a on a.id = au.author_id where a.name in ('Han Kang', 'Bora Chung');
-+----------------+
-| title          |
-+----------------+
-| Cursed Bunny   |
-| The White Book |
-+----------------+
+mysql> select b.id from books b join authored au on au.book_id = b.id join authors a on a.id = au.author_id where a.name in ('Han Kang', 'Bora Chung');
++----+
+| id |
++----+
+| 26 |
+| 74 |
++----+
 2 rows in set (0.00 sec)
 
 mysql> select b.title, avg(r.rating) as average_rating from books b join ratings r on b.id = r.book_id group by r.book_id;
